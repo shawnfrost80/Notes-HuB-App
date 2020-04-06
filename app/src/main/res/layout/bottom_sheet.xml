@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/card_border"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/cover" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/bottom_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bottom_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Subject Name"
+                android:textStyle="normal|bold"/>
+
+            <TextView
+                android:id="@+id/bottom_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Description"
+                android:textStyle="normal|bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="66dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_info_24px"
+                android:drawableStart="@drawable/ic_info_24px"
+                android:text="Info"
+                android:onClick="info"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                style="@style/ActionItem"/>
+
+            <TextView
+                android:id="@+id/rename"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_rename_24px"
+                android:drawableStart="@drawable/ic_rename_24px"
+                android:text="Edit"
+                android:onClick="rename"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                style="@style/ActionItem"/>
+
+            <TextView
+                android:id="@+id/download"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_save_alt_24px"
+                android:drawableStart="@drawable/ic_save_alt_24px"
+                android:text="Download"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:onClick="download"
+                style="@style/ActionItem"/>
+
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_delete_forever_24px"
+                android:drawableStart="@drawable/ic_delete_forever_24px"
+                android:text="Delete"
+                android:drawableTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:onClick="delete"
+                android:backgroundTint="@android:color/holo_red_dark"
+                style="@style/ActionItem"/>
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_clear_24px"
+                android:drawableStart="@drawable/ic_clear_24px"
+                android:text="Cancel"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:onClick="cancel"
+                style="@style/ActionItem"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
